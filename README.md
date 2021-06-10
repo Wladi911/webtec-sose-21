@@ -15,3 +15,4 @@ anzubieten, weil ihnen sonst die Abnehmer fehlen. Und weil der große Lebensmitt
 Nach jeder Vermittlung über die Webseite wird berechnet wie viel CO₂ gespart werden konnte und anschließend durch zur Gesamtzahl der Käufe hinzuaddiert, sodass jeder Kunde 
 in einer Art Fortschrittsbalken sehen kann welchen Teil er zur Rettung unseres Klimas beigetragen hat.
 
+<img src="MyBio.png" alt="Logo">
