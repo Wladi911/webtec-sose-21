@@ -9,17 +9,86 @@
 <body>
     <table>
         <tr>
-          <td>Produkt:</td>
-          <td><input
+          <td> 
+            <label for="vorname">Vorname:</label> 
+            <input
             type="text"
-            name="benutzername"
+            name="vorname"
+            placeholder="Vorname"
+            pattern=[a-z]
+            title="Bitte geben Sie ihren Vornamen ein"
+            minlength="2"
+            maxlength="30"/>
+        </td>
+        </tr>  
+        <tr>
+            <td> 
+            <label for="nachname">Nachname:</label> 
+            <input
+            type="text"
+            name="nachname"
+            placeholder="Nachname"
+            title="Bitte geben Sie ihren Nachnamen ein"
             size="30"
-            maxlength="30"
+            maxlength="30"/>
+           </td>
+           </tr>
+        <tr>
+            <td>
+            <label for="email">E-Mail*:</label> 
+            <input
+            type="text"
+            required="required"
+            name="email"
+            placeholder="E-Mail"
+            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+            title="Bitte geben Sie ihre E-Mail-Adresse ein"
+            size="30"
+            maxlength="30"/>
             </td>
-          <td></td>
-          <td>Produkt:</td>
-          <td>Äpfel</td>
         </tr>
+        <tr>
+            <td>
+        <label for="kundennummer">Kundennummer:</label> 
+            <input
+            type="text"
+            name="kundennummer"
+            placeholder="Kundennummer"
+            pattern=[0-9][p]?
+            title="Bitte geben Sie ihre Kundennummer ein"
+            minlength="8"
+            maxlength="8"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+        <label for="betreff">Betreff*:</label> 
+            <input
+            type="text"
+            name="betreff"
+            placeholder="Betreff"
+            required="required"
+            title="Bitte geben Sie ihren Betreff an"
+            maxlength="30"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+        <label for="kategorie">Kategorie:</label> 
+        <select name="kategorie" size="1">
+            <option value="Verbesserungsvorschlag"
+                selected="selected">Verbesserungsvorschlag</option>
+            <option value="reklamation">Reklamation</option>
+            <option value="Andere">Andere</option>
+            </select>
+            </td>
+        </tr>    
+            
+
+        
+
     
 </body>
 </html>
