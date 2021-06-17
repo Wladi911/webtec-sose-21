@@ -16,3 +16,5 @@ Nach jeder Vermittlung über die Webseite wird berechnet wie viel CO₂ gespart 
 in einer Art Fortschrittsbalken sehen kann welchen Teil er zur Rettung unseres Klimas beigetragen hat.
 
 <img src="MyBio.png" alt="Logo">
+
+<!-- pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" -->
