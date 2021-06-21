@@ -1,0 +1,30 @@
+body{
+    background-color: seashell;
+    text-align: center;
+
+}
+#navigation {
+    margin-bottom: 24px;
+}
+
+
+
+}
+
+#navigation. link:hover {
+    padding: 24px;
+    background-color: olivedrab;
+
+}
+
+
+.produkt1 img{
+    width: 80%;
+    max-width: 240px;
+
+}
+
+.produkt2 img{
+    width: 80%;
+    max-width: 240px;
+}
