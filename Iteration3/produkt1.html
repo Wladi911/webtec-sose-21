@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel= "stylesheet" href="styles.css">
+    <script src="js/counter.js"></script>
+    <link rel= "stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <a href="C:\Users\Home\Documents\GitHub\webtec-sose-21\Iteration2\startseite.html"> 
         <img src="MY BIO.jpg" alt="Logo der Webseite">
@@ -61,6 +63,7 @@
           <td>
             <tr>
           <label>Bewertung: </label> 
+            
             <select name="bewertung" size="1">
             <option value="5" selected="selected">5 Sterne</option>   
             <option value="4">4 Sterne</option>
@@ -69,11 +72,12 @@
             <option value="1">1 Stern</option>
             </tr>
           </td>
-          
-
           <td>
             
-            <textarea name="rezension" rows="20" ols="160" placeholder="Schreiben Sie hier ihre Rezension" maxlength="800" title="Schreiben Sie hier ihre Rezension"></textarea>
+              <span id="current">0</span>
+              <span id="maximum">/ 800</span>
+          
+            <textarea name="rezension" id="rezension" rows="20" ols="160" placeholder="Schreiben Sie hier ihre Rezension" maxlength="800" title="Schreiben Sie hier ihre Rezension"></textarea>
          </td>
          <td>
            <tr></tr>
