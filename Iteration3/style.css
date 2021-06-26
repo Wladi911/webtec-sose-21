@@ -10,8 +10,8 @@ body img{
 
 label {
     float:left;
-    width:130px;
-    margin-right: 1cm;
+    width: 50px;
+    margin-right: 50px;
     font-family: Verdana;
     }
 
@@ -30,9 +30,7 @@ table {
     border: 1px solid black;
 }
 
-legend {
-    
-}
+
 
 fieldset {
 
