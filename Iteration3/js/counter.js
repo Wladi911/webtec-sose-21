@@ -1,10 +1,5 @@
-$('textarea').keyup(function() {
-    
-    var characterCount = $(this).val().length,
-        current = $('#current'),
-        maximum = $('#maximum'),
-        theCount = $('#the-count');
-      
-    current.text(characterCount);
+function count_up(obj) {
+        
+    document.getElementById('current').innerHTML = obj.value.length; 
+}
 
-});
