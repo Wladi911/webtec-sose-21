@@ -1,0 +1,43 @@
+body{
+    font-family: Verdana;
+    background-color: rgb(164, 204, 164);
+}
+body img{
+
+    width: 80%;
+    max-width: 240px;
+}
+
+label {
+    float:left;
+    width: 50px;
+    margin-right: 50px;
+    font-family: Verdana;
+    }
+
+textarea {
+
+    float: left;
+}    
+    
+input {
+    
+    float: left;
+
+}
+
+table {
+    border: 1px solid black;
+}
+
+
+
+fieldset {
+
+    border: 1px solid black;
+}
+    
+
+
+
+
