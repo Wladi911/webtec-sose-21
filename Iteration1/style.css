@@ -36,9 +36,7 @@ label {
         border: 1px solid black;
     }
     
-    legend {
-        
-    }
+
     
     fieldset {
     
@@ -50,8 +48,13 @@ label {
         width: 10%;
         max-width: 50px;
     
-    
-    
+    }
+    h2 {color: #6f7a74}
+
+    #überschtift {font-weight: bold;}
+
+    .imgklein {
+        width: 20px;
     }
 
 
