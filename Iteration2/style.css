@@ -83,7 +83,7 @@ header {
   }
   
   a:visited {
-    color: pink;
+    color: rgb(224, 101, 30);
     background-color: transparent;
     text-decoration: none;
   }
@@ -111,4 +111,6 @@ header {
     box-shadow: 10px 10px 15px silver
     
   }
-
+  .imgklein {
+    width: 20px;
+}
