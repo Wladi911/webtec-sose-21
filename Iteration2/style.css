@@ -122,3 +122,13 @@ header {
   transform: translateX(10px);
   transition-duration: 1s;
 }
+
+.imagecontainer {
+  font-family: Arial, "Times new Roman";
+  width: 439px; margin: 10px;
+}
+
+.imagecontainer :hover {
+  transform: translateX(15px);
+  transition-duration: 2s;
+}
