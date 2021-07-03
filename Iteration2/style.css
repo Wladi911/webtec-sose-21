@@ -114,3 +114,11 @@ header {
   .imgklein {
     width: 20px;
 }
+
+.Animationtoside {
+  font-family: Arial, "Times new Roman";
+}
+.Animationtoside :hover {
+  transform: translateX(10px);
+  transition-duration: 1s;
+}
