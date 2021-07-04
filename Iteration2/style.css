@@ -1,6 +1,7 @@
 body{
     font-family: Verdana;
     background: linear-gradient(45deg, #ffffff ,rgb(214, 238, 214), rgb(164, 204, 164))no-repeat center center fixed;
+  
 }
 
 
@@ -61,10 +62,11 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
 
 header {
-    font-family: Arial, "Times new Roman";
+    font-family: Verdana;
     width: 80%; margin: 30px;
     margin-top: 30px
   }
@@ -138,3 +140,4 @@ button {
   min-width: 100px;
   min-height: 50px;
 }
+
