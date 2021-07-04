@@ -5,6 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="js/counter.js"></script>
+    <script src="js/zumWarenkorbHinzufuegen.js"></script>
+    <script>
+       let produkt = {
+          name: 'Kartoffeln (festkochend)',
+          preis: '1,00 €',
+          bild_url: './img/banane.png',
+          // ggf. weitere Attribute ...
+        };
+        zumWarenkorbHinzufuegen(produkt)
+      </script>
+
     <link rel= "stylesheet" href="style.css">
 </head>
 
@@ -54,6 +67,9 @@
             <td>Preis: 1,20€/kg</td>
             
           </tr>
+          <td>
+            <button type="button" onclick="zumWarenkorbHinzufuegen(produkt)" id="indenwarenkorb">In den Warenkorb</button>
+          </td>
       </table>
 
       <br>
@@ -76,7 +92,11 @@
 
           <td>
             
-            <textarea name="rezension" rows="20" ols="160" placeholder="Schreiben Sie hier ihre Rezension" maxlength="800" title="Schreiben Sie hier ihre Rezension"></textarea>
+            <div>
+              <span id="current">0</span>
+              <span id="maximum">/ 800</span>
+            </div>
+            <textarea name="rezension" rows="20" ols="160" placeholder="Schreiben Sie hier ihre Rezension" maxlength="800" title="Schreiben Sie hier ihre Rezension" onkeyup="count_up(this)"></textarea>
          </td>
          <td>
            <tr></tr>
