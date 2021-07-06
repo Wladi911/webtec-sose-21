@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/counter.js"></script>
+    <script src="js/zumWarenkorbHinzufuegen.js"></script>
+    <script>
+       let produkt = {
+          name: 'Kartoffeln (festkochend)',
+          hersteller: 'Bauer Schmidt & Söhne',
+          produktbewertung: '4,8/5,0',
+          preis: '4,00€/kg ',
+          bild_url: 'ProdKartoffeln.jpg'
+          
+        };
+        zumWarenkorbHinzufuegen(produkt)
+      </script>
+    <link rel= "stylesheet" href="style.css">
+</head>
+
+<body> 
+  
+  <header>
+
+    <a href="startseite.html">
+      <div class="imagecontainer">
+        <img src="Logo.jpg" class="headerimg" alt="Logo der Webseite"/></a>
+      </div> 
+
+      <nav class="navigation">
+        <a href="startseite.html">Startseite</a> |
+        <a href="kontakt.html">Kontakt</a> | 
+        <a href="impressum.html">Impressum</a>
+        <a href="warenkorb.html"><span style="float: right">Warenkorb</span></a>     
+     </nav>
+</header>
+
+
+
+ <main>
+        
+    <h2>Kartoffeln (festkochend)</h2>
+    <figure>
+      <img src="ProdKartoffeln.jpg" class="produktbildgroß" alt="Bild von Kartoffeln">
+        <figcaption>Symbolbild von Kartoffeln</figcaption>
+      </figure>
+
+    <table>
+        <tr>
+          <td>Produkt: Kartoffeln</td>
+          
+        </tr>
+        <tr>
+            <td>Sorte: festkochend</td>
+            
+          </tr>
+        <tr>
+          <td>Hersteller: Bauer Schmidt & Söhne</td>
+          
+         </tr>
+         <tr>
+           <td>Im Angebot seit: August 2019</td>
+           
+         </tr>
+         <tr>
+            <td>Durchschnittliche Produktbewertung: 4,8/5,0</td>
+            
+          </tr>
+          <tr>
+            <td>Preis: 4,00€/kg</td>
+            
+          </tr>
+          <td>
+            <button type="button" onclick="zumWarenkorbHinzufuegen(produkt)" id="indenwarenkorb">In den Warenkorb</button>
+          </td>
+      </table>
+        
+    <br>
+      <form method="post">
+        <fieldset>
+          <legend>Kundenrezension verfassen</legend>
+          <table>
+          <td>
+            <tr>
+          <label>Bewertung: </label> 
+            <select name="bewertung" size="1">
+            <option value="5" selected="selected">5 Sterne</option>   
+            <option value="4">4 Sterne</option>
+            <option value="3">3 Sterne</option>
+            <option value="2">2 Sterne</option>
+            <option value="1">1 Stern</option>
+            </tr>
+          </td>
+          
+
+          <td>
+            <div>
+              <span id="current">0</span>
+              <span id="maximum">/ 800</span>
+            </div>
+            
+            <textarea name="rezension" rows="20" ols="160" placeholder="Schreiben Sie hier ihre Rezension" maxlength="800" title="Schreiben Sie hier ihre Rezension" onkeyup="count_up(this)"></textarea>
+         </td>
+         <td>
+           <tr></tr>
+         </td>
+          <td>
+         <input type="submit" value="Speichern">
+          </td>
+        
+          </table>
+        
+        </fieldset>
+      </form>
+
+    </main>
+
+    <footer>
+
+      © Josephat Lema, Wladislaw Reschetnik – 2021 
+
+  </footer>
+   
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+body{
+    font-family: Verdana;
+    background: linear-gradient(45deg, #ffffff ,rgb(214, 238, 214), rgb(164, 204, 164))no-repeat center center fixed;
+}
+
+
+label {
+    float:left;
+    width:130px;
+    margin-right: 1cm;
+    font-family: Verdana;
+    }
+
+.produktbildgroß{
+
+max-width: 40%;
+max-height: 40%;
+
+} 
+
+.produktbildklein{
+
+  max-width: 30%;
+  max-height: 30%;
+  
+  }  
+textarea {
+
+    float: left;
+}    
+    
+input {
+    
+    float: left;
+
+}
+
+table {
+    border: 1px solid black;
+    width: 100%; 
+}
+
+fieldset {
+
+    border: 1px solid black;
+}
+ 
+.headerimg{
+
+    width: 45%;
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+    font-family: Arial, "Times new Roman";
+    width: 80%; margin: 30px;
+    color: black;
+    position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+header {
+    font-family: Arial, "Times new Roman";
+    width: 80%; margin: 30px;
+    margin-top: 30px
+  }
+
+  main {
+    font-family: Arial, "Times new Roman";
+    width: 80%; margin: 30px;
+  }
+  
+  .navigation {
+    margin-top: 10px;
+    border: 1px solid black;
+
+  }
+
+  a:link {
+    color:#115c13;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(224, 101, 30);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    text-shadow: 5px 5px 10px #777;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  
+  .imgklein {
+    width: 20px;
+}
+
+.Animationtoside {
+  font-family: Arial, "Times new Roman";
+}
+.Animationtoside :hover {
+  transform: translateX(10px);
+  transition-duration: 1s;
+}
+
+.imagecontainer {
+  font-family: Arial, "Times new Roman";
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagecontainer :hover {
+  transform: translateX(15px);
+  transition-duration: 2s;
+}
+
+button {
+
+  border-radius: 4px;
+  background-color: rgb(71, 192, 71);
+  margin: 2px;
+  min-width: 100px;
+  min-height: 50px;
+}
+figure {
+  display: block;
+  float: left;
+  position: relative;
+  
+}
+
+figcaption {
+  color: black;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 40%;
+  text-align: left;
+  margin-top: 0px;
+}
+
+button[disabled]{
+  border-radius: 4px;
+  background-color: #cccccc;
+  color: #666666;
+}
