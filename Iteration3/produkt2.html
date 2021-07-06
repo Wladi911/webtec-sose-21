@@ -10,12 +10,18 @@
     <script src="js/zumWarenkorbHinzufuegen.js"></script>
     <script>
        let produkt = {
-          name: 'Kartoffeln (festkochend)',
-          preis: '1,00 €',
-          bild_url: './img/banane.png',
-          // ggf. weitere Attribute ...
+          name: 'Äpfel (Knebusch)',
+          hersteller: 'Biotropic',
+          produktbewertung: '4,4/5,0',
+          preis: '1,20€/kg',
+          bild_url: 'ProdApfel.jpg'
         };
         zumWarenkorbHinzufuegen(produkt)
+      </script>
+      <script>
+        function buttondis() {
+          document.getElementById("indenwarenkorb").disabled = true;
+        }
       </script>
 
     <link rel= "stylesheet" href="style.css">
@@ -41,7 +47,10 @@
 <main>
 
     <h2>Äpfel (Knebusch)</h2>
-    <img src="ProdApfel.jpg" class="produktbildgroß" alt="Bild von einer Bio Banane">
+    <figure>
+      <img src="ProdApfel.jpg" class="produktbildgroß" alt="Bild von einer Bio Banane">
+        <figcaption>Symbolbild von Äpfeln</figcaption>
+    </figure>
     <table>
         <tr>
           <td>Produkt: Apfel</td>
@@ -68,7 +77,7 @@
             
           </tr>
           <td>
-            <button type="button" onclick="zumWarenkorbHinzufuegen(produkt)" id="indenwarenkorb">In den Warenkorb</button>
+            <button type="button" onclick="zumWarenkorbHinzufuegen(produkt); buttondis()" id="indenwarenkorb">In den Warenkorb</button>
           </td>
       </table>
 

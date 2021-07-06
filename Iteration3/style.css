@@ -138,3 +138,25 @@ button {
   min-width: 100px;
   min-height: 50px;
 }
+figure {
+  display: block;
+  float: left;
+  position: relative;
+  
+}
+
+figcaption {
+  color: black;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 40%;
+  text-align: left;
+  margin-top: 0px;
+}
+
+button[disabled]{
+  border-radius: 4px;
+  background-color: #cccccc;
+  color: #666666;
+}

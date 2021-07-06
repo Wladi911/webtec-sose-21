@@ -11,9 +11,11 @@
     <script>
        let produkt = {
           name: 'Kartoffeln (festkochend)',
-          preis: '1,00 €',
-          bild_url: './img/banane.png',
-          // ggf. weitere Attribute ...
+          hersteller: 'Bauer Schmidt & Söhne',
+          produktbewertung: '4,8/5,0',
+          preis: '4,00€/kg ',
+          bild_url: 'ProdKartoffeln.jpg'
+          
         };
         zumWarenkorbHinzufuegen(produkt)
       </script>
@@ -42,9 +44,11 @@
  <main>
         
     <h2>Kartoffeln (festkochend)</h2>
-    <img src="ProdKartoffeln.jpg" class="produktbildgroß" alt="Bild von Kartoffeln">
-    <br>
-    <br>
+    <figure>
+      <img src="ProdKartoffeln.jpg" class="produktbildgroß" alt="Bild von Kartoffeln">
+        <figcaption>Symbolbild von Kartoffeln</figcaption>
+      </figure>
+
     <table>
         <tr>
           <td>Produkt: Kartoffeln</td>
