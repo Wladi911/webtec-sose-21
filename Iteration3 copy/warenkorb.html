@@ -10,6 +10,8 @@
 
     
 
+    
+
 </head>
 
 <body> 
@@ -29,19 +31,79 @@
 </header>
 
 <main>
-
-    <h1>Warenkorb</h1>
-    <div>
-      <button onclick="">Get</button>
-      <div id="table"></div>
-    </div>
+  <article>
+    <h2>Warenkorb</h2>
     
+    <table id="customers">
+     <thead>
+      <tr>
+        <th>Bild</th>
+        <th>Produkt</th>
+        <th>Hersteller</th>
+        <th>Preis</th>
+      </tr>
+     </thead>
+     <tbody id="warenkorb"></tbody>
 
-      
+     </table>
 
-    </main>  
+    </article>
 
+ </main>  
+ <footer>
+
+  © Josephat Lema, Wladislaw Reschetnik – 2021 
+
+</footer>
         
-    <script src="js/script.js"></script>
+    <script>
+
+      function warenkorbtabelle() {
+        let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
+
+        let tabelle = document.getElementById('warenkorb')
+        tabelle.innerHTML = ""
+        if (warenkorb){
+          for (let i = 0; i < warenkorb.length; i++){
+            let element = document.createElement('tr')
+            let produktbild = document.createElement('td')
+            produktbild.innerHTML = "<img class='produktbildklein' src= "+ warenkorb[i].bild_url + ">"
+            element.appendChild(produktbild)
+
+            let pname = document.createElement('td')
+            pname.textContent = warenkorb[i].produktname
+            element.appendChild(pname)
+
+            let phersteller = document.createElement('td')
+            phersteller.textContent = warenkorb[i].produkthersteller
+            element.appendChild(phersteller)
+
+            let ppreis = document.createElement('td')
+            ppreis.textContent = warenkorb[i].produktpreis
+            element.appendChild(ppreis)
+
+            let produktlöschen = document.createElement('td')
+            produktlöschen.innerHTML = "<button onklick=pLöschen>Löschen</button>"
+            /* produktlöschen.innerHTML = "<button onklick=pLöschen (" + i + ") id=" + i + ">Löschen</button>" */
+            element.appendChild(produktlöschen)
+
+            tabelle.appendChild(element)
+
+          }
+
+          
+        }
+      }
+      warenkorbtabelle ()
+
+
+        function pLöschen(id) {
+        let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
+        warenkorb.splice(id, 1)
+        localStorage.setItem('warenkorb', JSON.stringify(warenkorb)) 
+        warenkorbtabelle()
+      } 
+     
+    </script>
 </body>
 </html>

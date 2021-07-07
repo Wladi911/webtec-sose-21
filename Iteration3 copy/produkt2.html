@@ -6,23 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="js/counter.js"></script>
-    <script src="js/zumWarenkorbHinzufuegen.js"></script>
-    <script>
-       let produkt = {
-          name: 'Äpfel (Knebusch)',
-          hersteller: 'Biotropic',
-          produktbewertung: '4,4/5,0',
-          preis: '1,20€/kg',
-          bild_url: 'ProdApfel.jpg'
-        };
-        zumWarenkorbHinzufuegen(produkt)
-      </script>
-      <script>
-        function buttondis() {
-          document.getElementById("indenwarenkorb").disabled = true;
-        }
-      </script>
+    
 
     <link rel= "stylesheet" href="style.css">
 </head>
@@ -127,5 +111,17 @@
 
   </footer>
 
+  <script src="js/counter.js"></script>
+  <script src="js/zumWarenkorbHinzufuegen.js"></script>
+  <script>let produkt = {
+    bild_url: "ProdApfel.jpg",
+    produktname: 'Äpfel (Knebusch)',
+    produkthersteller: 'Biotropic',
+    produktpreis: '1,20€/kg'}</script>
+    <script>
+      function buttondis() {
+        document.getElementById("indenwarenkorb").disabled = true;
+      }
+    </script>
 </body>
 </html>

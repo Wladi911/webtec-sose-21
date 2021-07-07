@@ -16,3 +16,9 @@ function zumWarenkorbHinzufuegen(produkt) {
       localStorage.setItem('warenkorb', JSON.stringify([produkt]));
     }
   }
+
+  /* let produkt = {
+    bild_url: "ProdKartoffeln.jpg",
+    produktname: 'Kartoffeln (festkochend)',
+    produkthersteller: 'Bauer Schmidt & Söhne',
+    produktpreis: '4,00€/kg '} */
