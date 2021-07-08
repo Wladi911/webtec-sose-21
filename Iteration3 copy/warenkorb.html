@@ -34,13 +34,14 @@
   <article>
     <h2>Warenkorb</h2>
     
-    <table id="customers">
+    <table class="customers" id="warenkorbidtable">
      <thead>
       <tr>
         <th>Bild</th>
         <th>Produkt</th>
         <th>Hersteller</th>
         <th>Preis</th>
+        <th>Aktion</th> 
       </tr>
      </thead>
      <tbody id="warenkorb"></tbody>
@@ -82,28 +83,25 @@
             ppreis.textContent = warenkorb[i].produktpreis
             element.appendChild(ppreis)
 
-            let produktlöschen = document.createElement('td')
-            produktlöschen.innerHTML = "<button onklick=pLöschen>Löschen</button>"
-            /* produktlöschen.innerHTML = "<button onklick=pLöschen (" + i + ") id=" + i + ">Löschen</button>" */
+            
+
+            let produktlöschen = document.createElement('button')
+            produktlöschen.innerHTML = "Löschen"
+            produktlöschen.onclick = function pLoeschen(x) {
+                                        let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
+                                        warenkorb.splice(x, 1)
+                                        localStorage.setItem('warenkorb', JSON.stringify(warenkorb))
+                                        warenkorbtabelle() 
+                                        } 
             element.appendChild(produktlöschen)
 
             tabelle.appendChild(element)
 
-          }
-
-          
+          }        
         }
       }
       warenkorbtabelle ()
 
-
-        function pLöschen(id) {
-        let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
-        warenkorb.splice(id, 1)
-        localStorage.setItem('warenkorb', JSON.stringify(warenkorb)) 
-        warenkorbtabelle()
-      } 
-     
     </script>
 </body>
 </html>

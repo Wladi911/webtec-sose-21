@@ -37,6 +37,7 @@ input {
 table {
     border: 1px solid black;
     width: 100%; 
+    border-collapse: collapse;
 }
 
 fieldset {
@@ -138,10 +139,14 @@ button {
 
   border-radius: 4px;
   background-color: rgb(71, 192, 71);
-  margin: 2px;
   min-width: 100px;
   min-height: 50px;
+  border-collapse: collapse;
+  margin-top: 50%;
+
 }
+
+
 figure {
   display: block;
   float: left;
@@ -166,23 +171,23 @@ button[disabled]{
 }
 
 
-#customers {
+.customers {
   font-family: Verdana;
   border-collapse: collapse;
   max-width: 80%;
 }
 
-#customers td, #customers th {
+.customers td, .customers th {
   border: 1px solid #ddd;
   padding: 10px;
   ;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+.customers tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: rgb(255, 255, 255);}
+.customers tr:hover {background-color: rgb(255, 255, 255);}
 
-#customers th {
+.customers th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -190,3 +195,4 @@ button[disabled]{
   color: white;
   padding: auto;
 }
+
