@@ -34,7 +34,7 @@
   <article>
     <h2>Warenkorb</h2>
     
-    <table class="customers" id="warenkorbidtable">
+    <table class="customers">
      <thead>
       <tr>
         <th>Bild</th>
@@ -44,7 +44,7 @@
         <th>Aktion</th> 
       </tr>
      </thead>
-     <tbody id="warenkorb"></tbody>
+     <tbody style="border: solid rgb(177, 219, 184) 3px"id="warenkorb"></tbody>
 
      </table>
 
@@ -83,10 +83,9 @@
             ppreis.textContent = warenkorb[i].produktpreis
             element.appendChild(ppreis)
 
-            
-
             let produktlöschen = document.createElement('button')
             produktlöschen.innerHTML = "Löschen"
+            produktlöschen.style="margin-top: 50%; margin-bottom: 50%; outline: none"
             produktlöschen.onclick = function pLoeschen(x) {
                                         let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
                                         warenkorb.splice(x, 1)

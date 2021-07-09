@@ -142,8 +142,7 @@ button {
   min-width: 100px;
   min-height: 50px;
   border-collapse: collapse;
-  margin-top: 50%;
-
+  margin-top: auto;
 }
 
 
@@ -195,4 +194,5 @@ button[disabled]{
   color: white;
   padding: auto;
 }
+
 
