@@ -16,3 +16,5 @@ function zumWarenkorbHinzufuegen(produkt) {
       localStorage.setItem('warenkorb', JSON.stringify([produkt]));
     }
   }
+
+

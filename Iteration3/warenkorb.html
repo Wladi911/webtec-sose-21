@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Warenkorb</title>
     <link rel= "stylesheet" href="style.css">
+    <script src="js/zumWarenkorbHinzufuegen.js"></script>
+
 </head>
 
 <body> 
@@ -25,77 +27,85 @@
 </header>
 
 <main>
-
-    <h1>Warenkorb</h1>
-    <table>
-        <tr>
-          <td colspan="2"><img src="ProdKartoffeln.jpg" alt="Bild von Kartoffeln" class="produktbildklein"></td>
-          <td></td>
-          <td colspan="2"><img src="ProdApfel.jpg" alt="Bild von Äpfeln" class="produktbildklein"/></td>
-        <tr>
-          <td>Produkt:</td>
-          <td>Kartoffeln</td>
-          <td></td>
-          <td>Produkt:</td>
-          <td>Äpfel</td>
-        </tr>
-        <tr>
-          <td>Sorte:</td>
-          <td>festkochend</td>
-          <td></td>
-          <td>Sorte:</td>
-          <td>Knebusch</td>
-        </tr>
-        <tr>
-            <td>Menge:</td>
-            <td>5kg</td>
-            <td></td>
-            <td>Menge:</td>
-            <td>3kg</td>
-        </tr>
-
-        <tr>
-          <td>Durchschnittliche Bewertung:</td>
-          <td>4,8/5</td>
-          <td></td>
-          <td>Durchschnittliche Bewertung:</td>
-          <td>4,4/5.0</td>
-        </tr>
-        <tr>
-          <td>Preis:</td>
-          <td>4,00€/kg</td>
-          <td></td>
-          <td>Preis:</td>
-          <td>1,20€/kg</td>
-        </tr>
-        <tr>
-            <td><a href="">Löschen <img  src="Icon löschen.png" class="imgklein" alt="Löschsymbol"></a></td>
-            <td></td>
-            <td></td>
-            <td><a href="">Löschen <img  src="Icon löschen.png" class="imgklein" alt="Löschsymbol"></a></td>
-            <td></td>
-        </tr>
-        
-        <tr>
-            <td></td> 
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="5"><h3>Gesamtanzahl Produkte: 2 | Gesamtsumme: 46€</h3></td>
-        </tr>
-      </table>
-
-      <p><button type="button" >Jetzt kaufen</button></p>
-
-    </main>  
-
-    <footer>
-
-        © Josephat Lema, Wladislaw Reschetnik – 2021 
+  <article>
+    <h2>Warenkorb</h2>
     
-    </footer>
+    <table class="customers">
+     <thead>
+      <tr>
+        <th>Bild</th>
+        <th>Produkt</th>
+        <th>Hersteller</th>
+        <th>Preis</th>
+        <th>Aktion</th> 
+      </tr>
+     </thead>
+     <tbody style="border: solid rgb(177, 219, 184) 3px"id="warenkorb"></tbody>
 
+     </table>
+
+    </article>
+
+ </main>  
+ <footer>
+
+  © Josephat Lema, Wladislaw Reschetnik – 2021 
+
+</footer>
         
-  
+    <script>
+
+      function warenkorbtabelle() {
+        let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
+
+        //Element Warenkorb wird aus dem localstorage ausgelesen
+        let tabelle = document.getElementById('warenkorb')
+        tabelle.innerHTML = ""
+        //Schleife, sodass alle Elemente abgerufen werden
+        //Elemtn tr wird erstellt mit dem Inhalt aus dem localstorage
+        if (warenkorb){
+          for (let i = 0; i < warenkorb.length; i++){
+            let element = document.createElement('tr')
+            let produktbild = document.createElement('td')
+            produktbild.innerHTML = "<img class='produktbildklein' src= "+ warenkorb[i].bild_url + ">"
+            element.appendChild(produktbild)
+            
+            //Elemtn tr wird erstellt mit dem Inhalt aus dem localstorage
+            let pname = document.createElement('td')
+            pname.textContent = warenkorb[i].produktname
+            element.appendChild(pname)
+
+            //Elemtn tr wird erstellt mit dem Inhalt aus dem localstorage
+            let phersteller = document.createElement('td')
+            phersteller.textContent = warenkorb[i].produkthersteller
+            element.appendChild(phersteller)
+
+            //Elemtn tr wird erstellt mit dem Inhalt aus dem localstorage
+            let ppreis = document.createElement('td')
+            ppreis.textContent = warenkorb[i].produktpreis
+            element.appendChild(ppreis)
+
+            //Elemtn button wird erstellt mit dem Inhalt aus dem localstorage
+            //Funktion löscht das jeweilige Element(via splice)
+            let produktlöschen = document.createElement('button')
+            produktlöschen.innerHTML = "Löschen"
+            produktlöschen.style="margin-top: 50%; margin-bottom: 50%; outline: none"
+            produktlöschen.onclick = function pLoeschen(x) {
+                                        let warenkorb = JSON.parse(localStorage.getItem('warenkorb'))
+                                        warenkorb.splice(x, 1)
+                                        localStorage.setItem('warenkorb', JSON.stringify(warenkorb))
+                                        warenkorbtabelle() 
+                                        } 
+            element.appendChild(produktlöschen)
+
+            tabelle.appendChild(element)
+
+          }        
+        }
+      }
+      //Funktion wird aktualiesiert bzw neu geladen
+      warenkorbtabelle ()
+
+    </script>
 </body>
 </html>

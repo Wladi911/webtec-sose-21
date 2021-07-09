@@ -1,119 +1,111 @@
-body{
-    font-family: Verdana;
-    background: linear-gradient(45deg, #ffffff ,rgb(214, 238, 214), rgb(164, 204, 164))no-repeat center center fixed;
-  
+body {
+  font-family: Verdana;
+  background: linear-gradient(45deg, #ffffff, rgb(214, 238, 214), rgb(164, 204, 164))no-repeat center center fixed;
 }
 
-
 label {
-    float:left;
-    width:130px;
-    margin-right: 1cm;
-    font-family: Verdana;
-    }
+  float: left;
+  width: 130px;
+  margin-right: 1cm;
+  font-family: Verdana;
+}
 
-.produktbildgroß{
+.produktbildgroß {
+  max-width: 40%;
+  max-height: 40%;
+}
 
-max-width: 40%;
-max-height: 40%;
-
-} 
-
-.produktbildklein{
-
+.produktbildklein {
   max-width: 30%;
   max-height: 30%;
-  
-  }  
+}
+
 textarea {
+  float: left;
+}
 
-    float: left;
-}    
-    
 input {
-    
-    float: left;
-
+  float: left;
 }
 
 table {
-    border: 1px solid black;
-    width: 100%; 
+  border: 1px solid black;
+  width: 100%;
 }
 
 fieldset {
-
-    border: 1px solid black;
+  border: 1px solid black;
 }
- 
-.headerimg{
 
-    width: 45%;
-    display: block;
-    margin-left: auto;
+.headerimg {
+  width: 45%;
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
 
 footer {
-    font-family: Arial, "Times new Roman";
-    width: 80%; margin: 30px;
-    color: black;
-    position: relative;
+  font-family: Verdana;
+  width: 80%;
+  margin: 30px;
+  color: black;
+  position: relative;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
 
 header {
-    font-family: Verdana;
-    width: 80%; margin: 30px;
-    margin-top: 30px
-  }
+  font-family: Verdana;
+  width: 80%;
+  margin: 30px;
+  margin-top: 30px
+}
 
-  main {
-    font-family: Arial, "Times new Roman";
-    width: 80%; margin: 30px;
-  }
-  
-  .navigation {
-    margin-top: 10px;
-    border: 1px solid black;
+main {
+  font-family: Arial, "Times new Roman";
+  width: 80%;
+  margin: 30px;
+}
 
-  }
+.navigation {
+  margin-top: 10px;
+  border: 1px solid black;
+}
 
-  a:link {
-    color:#115c13;
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: rgb(224, 101, 30);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-    text-shadow: 5px 5px 10px #777;
-  }
-  
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  }
+a:link {
+  color: #115c13;
+  text-decoration: none;
+}
 
-  
-  .imgklein {
-    width: 20px;
+a:visited {
+  color: rgb(224, 101, 30);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+  text-shadow: 5px 5px 10px #777;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.imgklein {
+  width: 20px;
 }
 
 .Animationtoside {
   font-family: Arial, "Times new Roman";
 }
+
 .Animationtoside :hover {
   transform: translateX(10px);
   transition-duration: 1s;
@@ -133,18 +125,17 @@ header {
 }
 
 button {
-
   border-radius: 4px;
   background-color: rgb(71, 192, 71);
   margin: 2px;
   min-width: 100px;
   min-height: 50px;
 }
+
 figure {
   display: block;
   float: left;
   position: relative;
-  
 }
 
 figcaption {
